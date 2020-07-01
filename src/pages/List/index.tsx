@@ -26,16 +26,11 @@ const List = () => {
 
   return (
 
-    <div id='page-list'>
-      <div className="container center">
-        <main>
-          <ul>
-            {stateProdutos.map((produto, i) => (
-              <ProdItem key={i} produto={produto} />
-            ))}
-          </ul>
-        </main>
-      </div>
+
+    <div className="cards">
+      {stateProdutos.map((produto, i) => (
+        <ProdItem key={i} produto={produto} />
+      ))}
     </div>
   )
 }

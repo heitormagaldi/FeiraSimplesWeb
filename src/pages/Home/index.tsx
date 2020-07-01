@@ -9,9 +9,11 @@ const Home = () => {
   return (
     <>
     <Menu />
-    <div id="app">
+    <main>
+    <section className="cards">
       <List />
-    </div>
+      </section>
+    </main>
     <Footer />
   </>
   )
