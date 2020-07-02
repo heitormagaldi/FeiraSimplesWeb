@@ -24,6 +24,9 @@ body {
 
 header {
     background-color: #59C9A5;
+    z-index: 10;
+    position: static;
+
 }
 
 header .container {
@@ -33,6 +36,7 @@ header .container {
     width: 90%;
     max-width: 980px;
     margin: auto;
+    
     
 }
 header .container2 {

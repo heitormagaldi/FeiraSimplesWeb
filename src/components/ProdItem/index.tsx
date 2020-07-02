@@ -1,24 +1,40 @@
 import React from 'react';
-
+import imgIndisponivel from '../../assets/indisponivel.png';
 import './styles.css';
+import {
+  IoIosAddCircleOutline,
+  IoIosRemoveCircleOutline,
+} from 'react-icons/io';
 
 function ProdItem({ produto }: { produto: any }) {
   return (
     <div className="card">
       <div className="image">
-        
-        <img src={produto.IMAGEM}/>
-
-
+        <img src={imgIndisponivel} />
+        <img src={produto.IMAGEM} />
       </div>
       <div className="content">
-        <p className="title text--medium">
-          {produto.DESCRICAO}
-        </p>
-        <div className="info">
-          <p className="text--medium">{produto.PROMOCAO}</p>
-          <p className="price text--medium">{produto.PRECO}</p>
+        <div>
+          <span className="text--rotulo">Nome : </span>
+          <span className="title text--medium">
+            {produto.DESCRICAO}
+          </span>
         </div>
+
+        <div>
+          <span className="text--rotulo">Preço : </span>
+          <span className="text--preco">R$ {produto.PROMOCAO > 0 ? produto.PROMOCAO : produto.PRECO}</span>
+          <s className="text--desconto">R$ {produto.PROMOCAO > 0 ? produto.PROMOCAO : produto.PRECO}</s>
+        </div>
+      </div>
+      <div className="quantidade">
+        <a className="" href="#">
+          <span className="add"><IoIosAddCircleOutline /></span>
+        </a>
+        <input type="text" value='1' />
+        <a className="" href="#">
+          <span className="remove"><IoIosRemoveCircleOutline /></span>
+        </a>
       </div>
     </div>
   );

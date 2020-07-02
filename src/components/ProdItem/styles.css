@@ -6,10 +6,19 @@
   outline: 0;
 }
 .text--medium {
-  font-size: 1.6rem;
+  font-size: 2.00rem;
   line-height: 2.6rem;
+  font-weight: bold;
   font-weight: 400;
-  color: #ecf0f1;
+  color: #000000;
+}
+
+.text--desconto{
+  font-size: 1.4rem;
+  font-weight: ;
+  color: #1f4438;
+  margin: 0.8rem;
+  font-style:inherit ;
 }
 
 .card {
@@ -18,7 +27,8 @@
   background-color: #59C9A5;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-
+  border-style: solid;
+  border-color: #59C9A5;
 }
 
 .card:hover {
@@ -27,8 +37,7 @@
 
 .image {
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-
+  padding-top: 80.25%; /* 16:9 */
   overflow: hidden;
   position: relative;
 }
@@ -43,7 +52,50 @@
 
 .content {
   margin: 20px;
+  background-color: #84d1b9;
+  display: block;
 }
+.text--rotulo{
+  font-size: 2.0rem;
+  margin: 2%;
+  color: #3f3e3e;
+}
+.text--preco{
+  font-weight: bold;
+  color: #1f4438;
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+.quantidade {
+  margin: 20px;
+  margin-top: 0px;
+  background-color: #84d1b9;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20%;
+}
+.quantidade a{
+  font-size: 4.0rem;
+  justify-content: center;
+  padding-top: 5%;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: #449e82;
+}
+.quantidade input{
+  width: 20%;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-content: center;
+  text-align: center;
+  border-style: hidden;
+  border-radius: 40%;
+}
+
 
 .title {
   margin-bottom: 20px;
