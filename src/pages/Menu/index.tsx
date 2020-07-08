@@ -27,7 +27,7 @@ const Menu = () => {
   })
 
   return (
-    <header>
+    <header >
       <div className="container">
         <img
           src="https://feirasimples.com.br/assets/images/logo/feirasimpleslogo5.png"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imgIndisponivel from '../../assets/indisponivel.png';
 import './styles.css';
 import {
@@ -7,6 +7,19 @@ import {
 } from 'react-icons/io';
 
 function ProdItem({ produto }: { produto: any }) {
+
+  const [counter, setCounter] = useState(1);
+
+  function handleButtonPlusClick() {
+    if (counter < 99) {
+      setCounter(counter + 1);
+    }
+  }
+  function handleButtonMinusClick() {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  }
   return (
     <div className="card">
       <div className="image">
@@ -28,11 +41,13 @@ function ProdItem({ produto }: { produto: any }) {
         </div>
       </div>
       <div className="quantidade">
-        <a className="" href="#">
+        <a className="" onClick={handleButtonPlusClick}>
           <span className="add"><IoIosAddCircleOutline /></span>
         </a>
-        <input type="text" value='1' />
-        <a className="" href="#">
+
+        <input type="text" value={counter} />
+
+        <a className="" onClick={handleButtonMinusClick}>
           <span className="remove"><IoIosRemoveCircleOutline /></span>
         </a>
       </div>
